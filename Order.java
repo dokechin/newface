@@ -6,10 +6,13 @@ public class Order {
     private String hanbai_kosuu;
     private String hanbai_kingaku;
 
+    // コンストラクター
     public Order(String line) {
+        // 最終行の場合は、HIGHバリューを設定する
         if (line == null) {
             syohin_code ="ZZZZZZZ";
         } else {
+            // カンマ区切りで、値を取り出して設定する
             String[] lines = line.split(",");
             syohin_code = lines[0];
             hanbai_ymd = lines[1];

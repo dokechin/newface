@@ -5,10 +5,13 @@ public class Shohin {
     private String syohin_code;
     private String syohin_name;
 
+    // コンストラクター
     public Shohin(String line) {
+        // 最終行の場合は、HIGHバリューを設定する
         if (line == null) {
             syohin_code = "ZZZZZZZ";
         } else {
+            // 区切り文字カンマで区切って設定する
             String[] lines = line.split(",");
             syohin_code = lines[0];
             syohin_name = lines[1];
